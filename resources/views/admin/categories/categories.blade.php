@@ -42,23 +42,21 @@
                     </tr>
                 </tfoot>
                 <tbody>
-                    @isset($categories)
-                        @foreach ($categories as $category)
-                            <tr>
-                                <td> {{ $category->id }} </td>
-                                <td> {{ $category->name }} </td>
-                                <td> {{ $category->created_at }} </td>
-                                <td>
-                                    {{-- <a class="btn btn-primary" href="#"> Edit </a> --}}
-                                    <form method="POST" action="{{ url('categories/' . $category->id) }}">
-                                        @csrf
-                                        @method('delete')
-                                        <button class="btn btn-danger" onclick="return confirm('Are you sure?')"> Delete </button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    @endisset
+                    @foreach ($categories as $category)
+                        <tr>
+                            <td> {{ $category->id }} </td>
+                            <td> {{ $category->name }} </td>
+                            <td> {{ $category->created_at }} </td>
+                            <td>
+                                {{-- <a class="btn btn-primary" href="#"> Edit </a> --}}
+                                <form method="POST" action="{{ url('categories/' . $category->id) }}">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn btn-danger" onclick="return confirm('Are you sure?')"> Delete </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
