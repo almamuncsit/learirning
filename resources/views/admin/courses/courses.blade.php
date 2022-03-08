@@ -20,7 +20,7 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+        <h6 class="m-0 font-weight-bold text-primary">  Course List </h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -29,6 +29,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Category</th>
                         <th>Date</th>
                         <th>Action</th>
                     </tr>
@@ -37,6 +38,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Category</th>
                         <th>Date</th>
                         <th>Action</th>
                     </tr>
@@ -46,9 +48,9 @@
                         <tr>
                             <td> {{ $course->id }} </td>
                             <td> {{ $course->title }} </td>
+                            <td> {{ $course->category->name }} </td>
                             <td> {{ $course->created_at }} </td>
                             <td>
-
                                 <form method="POST" action="{{ url('courses/' . $course->id) }}">
                                     @csrf
                                     @method('delete')
