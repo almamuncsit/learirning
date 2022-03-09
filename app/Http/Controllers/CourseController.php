@@ -6,6 +6,7 @@ use App\Http\Requests\CourseRequest;
 use App\Models\Category;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 
@@ -48,7 +49,7 @@ class CourseController extends Controller
     public function store(CourseRequest $request)
     {
         $data = $request->all();
-        $data['user_id'] = 1;
+        $data['user_id'] = Auth::id();
 
         if($request->file('photo')) {
             $data['photo'] = Storage::putFile('courses', $request->file('photo'));
@@ -69,7 +70,7 @@ class CourseController extends Controller
      */
     public function show($id)
     {
-        $this->data['course'] = Course::find($id);
+        $this->data['course'] = Course::findOrFail($id);
         if( $this->data['course']->photo ) {
             $this->data['course']->photo = Storage::url($this->data['course']->photo);
         }
