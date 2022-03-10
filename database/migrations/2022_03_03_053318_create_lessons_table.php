@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('video_url', 150)->nullable();
-            $table->foreignId('courese_id');
+            $table->foreignId('course_id');
             $table->timestamps();
         });
     }

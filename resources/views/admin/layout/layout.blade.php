@@ -65,7 +65,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ url('lessons') }}">
                     <i class="fas fa-fw fa-chart-area"></i> <span> Lessons </span>
                 </a>
             </li>

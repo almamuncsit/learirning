@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\LessonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,7 @@ Route::middleware('auth')->group(function() {
     Route::get('admin', [AdminController::class, 'index'])->name('dashboard');
     Route::resource('categories', CategoryController::class)->except(['show', 'edit', 'update']);
     Route::resource('courses', CourseController::class);
+    Route::resource('lessons', LessonController::class);
 });
 
 
