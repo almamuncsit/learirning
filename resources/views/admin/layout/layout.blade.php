@@ -52,20 +52,20 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('categories') }}">
+                <a class="nav-link" href="{{ url('admin/categories') }}">
                     <i class="fas fa-fw fa-chart-area"></i> <span> Categories </span>
                 </a>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('courses') }}">
+                <a class="nav-link" href="{{ url('admin/courses') }}">
                     <i class="fas fa-fw fa-chart-area"></i> <span> Courses </span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('lessons') }}">
+                <a class="nav-link" href="{{ url('admin/lessons') }}">
                     <i class="fas fa-fw fa-chart-area"></i> <span> Lessons </span>
                 </a>
             </li>

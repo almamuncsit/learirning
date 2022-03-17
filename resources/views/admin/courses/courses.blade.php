@@ -5,7 +5,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"> Courses </h1>
-    <a href=" {{ url('courses/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a href=" {{ url('admin/courses/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i> Add Course
     </a>
 </div>
@@ -51,11 +51,11 @@
                             <td> {{ $course->category->name }} </td>
                             <td> {{ $course->created_at }} </td>
                             <td>
-                                <form method="POST" action="{{ url('courses/' . $course->id) }}">
+                                <form method="POST" action="{{ url('admin/courses/' . $course->id) }}">
                                     @csrf
                                     @method('delete')
-                                    <a class="btn btn-info btn-sm" href=" {{ url('courses/' . $course->id) }} "> View </a>
-                                    <a class="btn btn-primary btn-sm" href=" {{ url('courses/' . $course->id) . '/edit' }} "> Edit </a>
+                                    <a class="btn btn-info btn-sm" href=" {{ url('admin/courses/' . $course->id) }} "> View </a>
+                                    <a class="btn btn-primary btn-sm" href=" {{ url('admin/courses/' . $course->id) . '/edit' }} "> Edit </a>
                                     <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"> Delete </button>
                                 </form>
                             </td>

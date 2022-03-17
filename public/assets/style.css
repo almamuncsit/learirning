@@ -1,0 +1,24 @@
+
+.page-header {
+    padding: 40px 0;
+    text-align: center;
+    background: rgb(60, 118, 206);
+    color: #fff;
+}
+
+
+/* CSS for home page */
+.home-content {
+    margin: 50px 0px;
+}
+
+
+.courses {
+    margin: 40px 0;
+}
+
+.footer {
+    background: #ccc;
+    padding: 40px 0px;
+    text-align: center;
+}
