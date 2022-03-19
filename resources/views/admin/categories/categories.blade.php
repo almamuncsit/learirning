@@ -5,7 +5,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"> Categories </h1>
-    <a href=" {{ url('categories/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a href=" {{ url('admin/categories/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i> Add Category
     </a>
 </div>
@@ -49,7 +49,7 @@
                             <td> {{ $category->created_at }} </td>
                             <td>
                                 {{-- <a class="btn btn-primary" href="#"> Edit </a> --}}
-                                <form method="POST" action="{{ url('categories/' . $category->id) }}">
+                                <form method="POST" action="{{ url('admin/categories/' . $category->id) }}">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger" onclick="return confirm('Are you sure?')"> Delete </button>

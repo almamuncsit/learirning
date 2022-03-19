@@ -26,7 +26,7 @@
 
             <div class="card-body">
 
-                <form action=" {{ url('lessons/' . $lesson->id) }} " method="POST" enctype="multipart/form-data">
+                <form action=" {{ url('admin/lessons/' . $lesson->id) }} " method="POST" enctype="multipart/form-data">
                     @if ($lesson->id)
                         @method('PUT')
                     @endif

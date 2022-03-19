@@ -5,7 +5,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800"> Lessons </h1>
-    <a href=" {{ url('lessons/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a href=" {{ url('admin/lessons/create') }} " class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-plus fa-sm text-white-50"></i> Add Lesson
     </a>
 </div>
@@ -51,8 +51,8 @@
                             <td> {{ $lesson->course->title }} </td>
                             <td> {{ $lesson->created_at }} </td>
                             <td>
-                                <a class="btn btn-info btn-sm" href=" {{ url('lessons/' . $lesson->id) }} "> View </a>
-                                <a class="btn btn-primary btn-sm" href=" {{ url('lessons/' . $lesson->id) . '/edit' }} "> Edit </a>
+                                <a class="btn btn-info btn-sm" href=" {{ url('admin/lessons/' . $lesson->id) }} "> View </a>
+                                <a class="btn btn-primary btn-sm" href=" {{ url('admin/lessons/' . $lesson->id) . '/edit' }} "> Edit </a>
                             </td>
                         </tr>
                     @endforeach

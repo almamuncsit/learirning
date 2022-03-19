@@ -17,6 +17,20 @@
     margin: 40px 0;
 }
 
+.course-descripton {
+    margin: 30px 0;
+}
+.course-lessson ul {
+    margin: 0;
+    padding: 0;
+}
+.course-lessson ul li {
+    list-style: none;
+}
+.course-lessson ul li a:hover {
+    text-decoration: underline;
+}
+
 .footer {
     background: #ccc;
     padding: 40px 0px;

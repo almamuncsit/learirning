@@ -13,4 +13,13 @@ class CourseController extends Controller
 
         return view('frontend.courses.courses', $this->data);
     }
+
+
+    public function show(Course $course)
+    {
+        $this->data['course'] = $course;
+
+        return view('frontend.courses.details', $this->data);
+    }
+
 }

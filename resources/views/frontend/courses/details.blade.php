@@ -1,0 +1,35 @@
+@extends('frontend.layout.frontend')
+
+
+@section('content')
+
+<div class="page-header">
+    <div class="container">
+        <h1> {{ $course->title }}  </h1>
+    </div>
+</div>
+
+<div class="course-descripton">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-4">
+                <img class="img-fluid" src="{{ Storage::url($course->photo) }}" alt="{{ $course->title }}">
+            </div>
+            <div class="col-md-8">
+                <h2> {{ $course->title }}  </h2>
+                {{ $course->description }}
+                <div class="course-lessson mt-5">
+                    <h2> Lessons </h2>
+                    <ol>
+                        @foreach ($course->lessons as $lesson )
+                            <li><a href="" class="nav-link"> {{ $lesson->title }} </a></li>
+                        @endforeach
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@endsection

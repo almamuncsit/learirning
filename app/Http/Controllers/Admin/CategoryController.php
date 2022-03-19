@@ -45,7 +45,7 @@ class CategoryController extends Controller
         Category::create($data);
         $request->session()->flash('message', 'Category added successfully');
 
-        return redirect()->to('categories');
+        return redirect()->to('admin/categories');
     }
 
     /**
@@ -59,6 +59,6 @@ class CategoryController extends Controller
         $category->delete();
         Session::flash('message', 'Category deleted successfully');
 
-        return redirect()->to('categories');
+        return redirect()->to('admin/categories');
     }
 }

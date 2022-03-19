@@ -23,11 +23,14 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [FrontendCourseController::class, 'index'])->name('courses');
+Route::get('/courses/{course}', [FrontendCourseController::class, 'show'])->name('courses.show');
 
 
 Route::get('login', [AuthController::class, 'login_form'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+
 
 Route::middleware('auth')->prefix('admin')->group(function() {
     Route::get('/', [AdminController::class, 'index'])->name('dashboard');

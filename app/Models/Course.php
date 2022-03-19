@@ -18,7 +18,7 @@ class Course extends Model
     }
 
 
-    public function lesson()
+    public function lessons()
     {
         return $this->hasMany(Lesson::class);
     }

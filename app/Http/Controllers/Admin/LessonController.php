@@ -54,7 +54,7 @@ class LessonController extends Controller
 
         Session::flash('message', 'Lesson Added Successfully');
 
-        return redirect()->to('lessons/' . $lesson->id );
+        return redirect()->to('admin/lessons/' . $lesson->id );
     }
 
 
@@ -105,7 +105,7 @@ class LessonController extends Controller
 
         Session::flash('message', 'Lesson Updated Successfully');
 
-        return redirect()->to('lessons/' . $lesson->id );
+        return redirect()->to('admin/lessons/' . $lesson->id );
     }
 
 
@@ -121,7 +121,7 @@ class LessonController extends Controller
 
         Session::flash('message', 'Lesson Deleted Successfully');
 
-        return redirect()->to('lessons');
+        return redirect()->to('admin/lessons');
     }
 
 

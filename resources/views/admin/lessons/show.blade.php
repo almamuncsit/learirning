@@ -40,10 +40,10 @@
             <tr>
                 <th class="text-right"> Action </th>
                 <td>
-                    <form method="POST" action="{{ url('lessons/' . $lesson->id) }}">
+                    <form method="POST" action="{{ url('admin/lessons/' . $lesson->id) }}">
                         @csrf
                         @method('delete')
-                        <a class="btn btn-primary btn-sm" href=" {{ url('lessons/' . $lesson->id) . '/edit' }} "> Edit </a>
+                        <a class="btn btn-primary btn-sm" href=" {{ url('admin/lessons/' . $lesson->id) . '/edit' }} "> Edit </a>
                         <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"> Delete </button>
                     </form>
                 </td>
