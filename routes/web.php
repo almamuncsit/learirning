@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\LessonController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CourseController as FrontendCourseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LessonController as FrontendLessonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [FrontendCourseController::class, 'index'])->name('courses');
-Route::get('/courses/{course}', [FrontendCourseController::class, 'show'])->name('courses.show');
+Route::get('/courses/{course}', [FrontendCourseController::class, 'show'])->name('courses.details');
+Route::get('/lessons/{lesson}/{slug?}', [FrontendLessonController::class, 'show'])->name('lessons.details');
 
 
 Route::get('login', [AuthController::class, 'login_form'])->name('login');

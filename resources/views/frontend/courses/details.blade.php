@@ -22,7 +22,7 @@
                     <h2> Lessons </h2>
                     <ol>
                         @foreach ($course->lessons as $lesson )
-                            <li><a href="" class="nav-link"> {{ $lesson->title }} </a></li>
+                            <li><a href=" {{ route('lessons.details', ['lesson'=> $lesson->id, 'slug'=> Str::slug($lesson->title)]) }} " class="nav-link"> {{ $lesson->title }} </a></li>
                         @endforeach
                     </ol>
                 </div>
