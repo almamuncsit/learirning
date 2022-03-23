@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\AdminController;
@@ -26,6 +28,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/courses', [FrontendCourseController::class, 'index'])->name('courses');
 Route::get('/courses/{course}', [FrontendCourseController::class, 'show'])->name('courses.details');
 Route::get('/lessons/{lesson}/{slug?}', [FrontendLessonController::class, 'show'])->name('lessons.details');
+Route::get('about', [AboutController::class, 'show'])->name('about');
 
 
 Route::get('login', [AuthController::class, 'login_form'])->name('login');
